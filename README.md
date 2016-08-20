@@ -4,6 +4,8 @@
 
 ```
 $ npm install    # installs `jspm` and `http-server`
+
+$ node_modules/.bin/jspm update   # updates `jspm_packages`
 ```
 
 Start the server:
