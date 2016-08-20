@@ -9,5 +9,10 @@
   "devDependencies": {
     "http-server": "^0.9.0",
     "jspm": "^0.16.42"
+  },
+  "scripts": {
+    "jspm-update": "jspm update",
+    "": "---",
+    "serve": "http-server -p 8082 src/"
   }
 }

@@ -5,13 +5,13 @@
 ```
 $ npm install    # installs `jspm` and `http-server`
 
-$ node_modules/.bin/jspm update   # updates `jspm_packages`
+$ npm run jspm-update	# updates `jspm_packages`
 ```
 
 Start the server:
 
 ```
-$ node_modules/.bin/http-server -p 8082 .
+$ npm run serve
 ```
 
 Open [http://localhost:8082](http://localhost:8082) and the browser's development tools.
