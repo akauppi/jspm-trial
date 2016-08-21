@@ -26,3 +26,19 @@ You should see `42` on the console log.
 4. `app.js` contains `import {some} from 'some'`, which fetches a value (provided using ES2015 `let` syntax in `some.js`)
 5. `app.js` prints the received value in console log
 
+## Aurelia branch
+
+The `master` branch is a minimalistic sample of integrating `jspm` to a project.
+
+In the `aurelia` branch, we bring in [Aurelia](http://aurelia.io) framework, as well.
+
+## Tools recommended
+
+IntelliJ IDEA Community Edition 2016.2.2 does *not* provide ECMAScript 2015 syntax highlighting.
+
+[WebStorm](https://www.jetbrains.com/webstorm/) does, but it does *not* come with a community edition. You can:
+
+- get a commercial license (EUR 129/year)
+- apply for a license for open source development (free) 
+- go with some other editor
+
