@@ -1,4 +1,13 @@
-import {some} from "some";
+export class App {
+  constructor () {
+    this.message = "";
+  }
 
-console.log(some);  // 42
+  activate () {
+    this.message = "Hello from Aurelia!"
+  }
 
+  changeMessage () {
+    this.message = "Goodbye!"
+  }
+}
