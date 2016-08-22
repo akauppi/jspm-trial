@@ -34,11 +34,15 @@ In the `aurelia` branch, we bring in [Aurelia](http://aurelia.io) framework, as 
 
 ## Tools recommended
 
-IntelliJ IDEA Community Edition 2016.2.2 does *not* provide ECMAScript 2015 syntax highlighting.
+IntelliJ IDEA *Community Edition* 2016.2.2 does not provide ECMAScript 2015 syntax highlighting.
 
-[WebStorm](https://www.jetbrains.com/webstorm/) does, but it does *not* come with a community edition. You can:
+IntelliJ IDEA *Ultimate* does have ECMAScript 2015 support. Thomas Schlage (Zalando) is using it for Aurelia development.
 
-- get a commercial license (EUR 129/year)
-- apply for a license for open source development (free) 
+[WebStorm](https://www.jetbrains.com/webstorm/) does provide ECMAScript 2015 syntax highlighting, but it does *not* come with a community edition. 
+
+You can:
+
+- get a commercial license of WebStorm (EUR 129/year)
+- apply for a license for open source development (free)
 - go with some other editor
 
