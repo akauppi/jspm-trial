@@ -1,11 +1,12 @@
 # Minimal JSPM sample
 
-## Getting started
+## Development variant
+
+In the development variant, the files in `src/*.js` are being transpiled from ES2015 -> ES5 on the fly, within the browser.
 
 ```
-$ npm install    # installs `jspm` and `http-server`
-
-$ npm run jspm-update	# updates `jspm_packages`
+$ npm install
+$ npm run jspm-update
 ```
 
 Start the server:
@@ -16,21 +17,46 @@ $ npm run serve
 
 Open [http://localhost:8082](http://localhost:8082) and the browser's development tools.
 
-You should see `42` on the console log.
+You should get the `42` on the console log.
 
-## What happened?
+### What happened?
 
-1. `index.html` loads `jspm_packages/system.js` that is able to transpile ES2015 syntax on the fly, and handle the `import`/`export` syntax - which is great, by the way!
-2. `index.html` loads `config.js`, which calls `System.config` to set up jspm
-3. `System.import("app")` is run, which loads and transpiles `app.js`
-4. `app.js` contains `import {some} from 'some'`, which fetches a value (provided using ES2015 `let` syntax in `some.js`)
-5. `app.js` prints the received value in console log
+1. `dev/index.html` loads `dev/jspm_packages/system.js` that is able to transpile ES2015 syntax on the fly, and handle the `import`/`export` syntax
+2. `dev/index.html` loads `dev/config.js`, which calls `System.config` to set up jspm
+3. `System.import("src/app")` is run, which loads and transpiles `src/app.js`.
+4. `src/app.js` contains `import {some} from './some'`, which fetches a value (provided using ES2015 `const` syntax in `src/some.js`)
+5. `src/app.js` prints the received value in console log
 
-## Aurelia branch
+## Distribution variant (bundled)
 
-The `master` branch is a minimalistic sample of integrating `jspm` to a project.
+```
+$ npm run dist
+```
 
-In the `aurelia` branch, we bring in [Aurelia](http://aurelia.io) framework, as well.
+Open `dist/index.html` in a browser (no need to serve this time).
+
+It should work the same as the development variant.
+
+### What happened?
+
+1. [Rollup](http://rollupjs.org) was used with `src/app.js` as the entry point. It includes the local imports, and creates one combined `dist/bundle.js` output file.
+2. `dist/index.html` reads in the bundled file.
+
+### Watch
+
+```
+$ npm run dist-watch
+```
+
+This rebuilds the bundle automatically when source change. 
+
+Try it and change the `src/some.js` to e.g.
+
+```
+export const some = 42+1;
+```
+
+Then reload in the browser. You should see 43 in the console.
 
 ## Tools recommended
 

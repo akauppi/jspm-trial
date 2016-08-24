@@ -1,7 +1,7 @@
 {
   "jspm": {
     "directories": {
-      "baseURL": "src"
+      "baseURL": "dev"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
@@ -14,12 +14,14 @@
     "http-server": "^0.9.0",
     "jspm": "^0.16.42",
     "rollup": "^0.34.10",
-    "rollup-plugin-babel": "^2.6.1"
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-watch": "^2.5.0"
   },
   "scripts": {
     "jspm-update": "jspm update",
-    "serve": "http-server -p 8082 src/",
-    "rollup": "rollup -c rollup.config.js --output dist/bundle.js --sourcemap true",
+    "serve": "http-server -p 8082 dev/",
+    "dist": "rollup -c rollup.config.js --output dist/bundle.js --sourcemap true",
+    "dist-watch": "rollup -c rollup.config.js --output dist/bundle.js --sourcemap true --watch",
     "rollup-help": "rollup --help"
   },
   "babel": {
