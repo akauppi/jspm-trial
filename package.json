@@ -19,7 +19,7 @@
   "scripts": {
     "jspm-update": "jspm update",
     "serve": "http-server -p 8082 src/",
-    "rollup": "rollup -c rollup.config.js --output out/bundle.js --sourcemap true",
+    "rollup": "rollup -c rollup.config.js --output dist/bundle.js --sourcemap true",
     "rollup-help": "rollup --help"
   },
   "babel": {
