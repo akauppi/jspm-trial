@@ -10,12 +10,21 @@
     }
   },
   "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
     "http-server": "^0.9.0",
-    "jspm": "^0.16.42"
+    "jspm": "^0.16.42",
+    "rollup": "^0.34.10",
+    "rollup-plugin-babel": "^2.6.1"
   },
   "scripts": {
     "jspm-update": "jspm update",
-    "": "---",
-    "serve": "http-server -p 8082 src/"
+    "serve": "http-server -p 8082 src/",
+    "rollup": "rollup -c rollup.config.js --output out/bundle.js --sourcemap true",
+    "rollup-help": "rollup --help"
+  },
+  "babel": {
+    "presets": [
+      "es2015-rollup"
+    ]
   }
 }
