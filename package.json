@@ -12,17 +12,17 @@
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "http-server": "^0.9.0",
-    "jspm": "^0.16.42",
+    "jspm": "^0.16.45",
     "rollup": "^0.34.10",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-watch": "^2.5.0"
   },
   "scripts": {
-    "jspm-update": "jspm update",
     "serve": "http-server -p 8082 dev/",
-    "dist": "rollup -c rollup.config.js --output dist/bundle.js --sourcemap true",
-    "dist-watch": "rollup -c rollup.config.js --output dist/bundle.js --sourcemap true --watch",
-    "rollup-help": "rollup --help"
+    "dist-rollup": "rollup -c rollup.config.js --output dist-rollup/bundle.js --sourcemap true",
+    "dist-rollup-watch": "rollup -c rollup.config.js --output dist-rollup/bundle.js --sourcemap true --watch",
+    "rollup-help": "rollup --help",
+    "dist-jspm": "jspm bundle src/app.js dist-jspm/bundle.js --minify"
   },
   "babel": {
     "presets": [
